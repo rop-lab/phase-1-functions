@@ -13,46 +13,26 @@
 
 Functions are the single most important unit of code in JavaScript. Much like a
 `<div>` or a `<section>` in HTML, functions serve as ways to group together
-related bits of JavaScript code.  Grouped code is easier to read, debug, and
+related bits of JavaScript code. Grouped code is easier to read, debug, and
 improve.
 
 ## Define Abstraction
 
 Abstraction comes from Latin roots which mean "to pull away." It's the
-"take-away" or "impression" of a whole thing.  As humans, we often take sets of
+"take-away" or "impression" of a whole thing. As humans, we often take sets of
 single actions or things and _abstract them_ into another word.
 
 That word that we "pull away" is the "abstraction." Literally it means "the
 pulled away thing." You might not think about it often, but your brain is full
 of abstractions.
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>Single Units</th>
-    <th>Abstraction</th>
-  </tr>
-  
-  <tr>
-    <td>John, Paul, George, Ringo</td>
-    <td>The Beatles</td>
-  </tr>
-  <tr>
-    <td>Get two pieces of bread, put jam on ...</td>
-    <td>Make a peanut butter and jelly sandwich</td>
-  </tr>
-  <tr>
-    <td>Hermione, Harry, Ron</td>
-    <td>Troublesome Gryffindors</td>
-  </tr>
-  <tr>
-    <td>visit site, make userid, make password...</td>
-    <td>Sign up for Flatbook</td>
-  </tr>
-  <tr>
-    <td>get in the lift, hit "G" button, exit elevator, walk to subway...</td>
-    <td>Go home</td>
-  </tr>
-</table>
+| Single Units                                                      | Abstraction                             |
+| ----------------------------------------------------------------- | --------------------------------------- |
+| John, Paul, George, Ringo                                         | The Beatles                             |
+| Get two pieces of bread, put jam on ...                           | Make a peanut butter and jelly sandwich |
+| Hermione, Harry, Ron                                              | Troublesome Gryffindors                 |
+| visit site, make userid, make password...                         | Sign up for Flatbook                    |
+| get in the lift, hit "G" button, exit elevator, walk to subway... | Go home                                 |
 
 We create abstractions to make it easier to shorten our sentences. We'd never
 get anything done if we couldn't abstract! We also use abstractions to decide
@@ -69,7 +49,7 @@ Functions combine a series of steps under a new name. That's why they're
 _abstractions_. We'll call that the _function name_. More formally:
 
 **A function is an object that contains a sequence of JavaScript
-statements.  We can execute or _call_ it multiple times.**
+statements. We can execute or _call_ it multiple times.**
 
 To _call_ a function means to run the independent pieces that make it.
 Synonyms to _call_ that you might see are _execute_ and _invoke_.
@@ -104,9 +84,9 @@ Here we have _abstracted_ 6 activities into 1 activity:
 `exerciseByronThePoodle`.
 
 > **ASIDE**: Abstractions themselves can be lumped together _as if_ they were
-> single things.  The abstraction `dailyDogCareForByron` probably includes
+> single things. The abstraction `dailyDogCareForByron` probably includes
 > `feedByronThePoodle`, `giveWaterToByronThePoodle`, `exerciseByronThePoodle`,
-etc.
+> etc.
 
 ## Explain How To _Call_ a Function
 
@@ -167,7 +147,7 @@ these `String`s instead" we could get more _general_.
 
 That's the purpose of _parameters_. _Parameters_ are locally-scoped variables
 that are usable ("scoped") to inside the function. In our example, our variables
-`dogName` and `dogBreed` should become _parameters_.  They're defined inside of
+`dogName` and `dogBreed` should become _parameters_. They're defined inside of
 the _function declaration's_ `()`.
 
 ```javascript
@@ -196,8 +176,7 @@ function exerciseDog(dogName, dogBreed) {
 }
 ```
 
-When the function is _called_, it assigns `dogName = "Byron"` and `dogBreed =
-"poodle"`. The parameters are usable inside the function body _as if_ they had
+When the function is _called_, it assigns `dogName = "Byron"` and `dogBreed = "poodle"`. The parameters are usable inside the function body _as if_ they had
 been set with `const` inside the function.
 
 Because our function is now more _general_, we can:
@@ -209,8 +188,8 @@ exerciseDog("Emmeline", "bernedoodle");
 ```
 
 If expected arguments aren't given, the parameters won't be set. The
-parameters' values will be `undefined`.  This is just like non-initialized
-variables; if you don't assign a value they're `undefined`.  **This will 
+parameters' values will be `undefined`. This is just like non-initialized
+variables; if you don't assign a value they're `undefined`. **This will
 not cause an error in JavaScript**. This can lead to humorous bugs like:
 
 ```text
@@ -228,9 +207,9 @@ function exerciseDog(dogName="ERROR the Broken Dog", dogBreed="Sick Puppy") {
 
 In summary, we went from:
 
-* a list of operations
-* to a wrapped abstraction called a function
-* to a more general version of the function
+- a list of operations
+- to a wrapped abstraction called a function
+- to a more general version of the function
 
 ## Demonstrate _Return Values_
 
@@ -238,10 +217,9 @@ Sometimes it's helpful to send something _back_ to the place where the function
 was _called_. It's like a "summary" of what happened in the function. In real
 life, we expect the function "bake a cake" to return a "cake". Or we expect
 "Visit the ATM" to return paper money. Functions in JavaScript can also return
-things.  Consider:
+things. Consider:
 
 ```javascript
-
 const weatherToday = "Rainy";
 
 function exerciseDog(dogName, dogBreed) {
@@ -254,7 +232,7 @@ function exerciseDog(dogName, dogBreed) {
   console.log(`Throw the frisbee for ${dogName} the ${dogBreed}`);
   console.log(`Walk home with ${dogName} the ${dogBreed}`);
   console.log(`Unleash ${dogName} the ${dogBreed}`);
-  return `${dogName} is happy and tired!`
+  return `${dogName} is happy and tired!`;
 }
 
 const result = exerciseDog("Byron", "poodle");
@@ -265,8 +243,8 @@ When the JavaScript engine encounters a `return`statement it "returns" the value
 of the thing that appears to the right of the word. The thing could be a `String`,
 a `Number` or an _expression_ like `1 + 1` (which returns, `2`, sensibly enough).
 
-When a `return` is reached in the code, no further code behavior happens. Above, 
-if `weatherToday === "Rainy"` returns `true`, **the only thing that happens** is 
+When a `return` is reached in the code, no further code behavior happens. Above,
+if `weatherToday === "Rainy"` returns `true`, **the only thing that happens** is
 the evaluation and return of the `String` `${dogName} did not exercise due to rain`.
 
 Return values can be saved to variables. Or they can be used as inputs to other
@@ -274,7 +252,7 @@ functions.
 
 ## Conclusion
 
-In this lesson we learned about the  idea of abstraction, both in real life and
+In this lesson we learned about the idea of abstraction, both in real life and
 in code. Abstractions reduce complexity by allowing us to think in groups of
 activities or things instead of being fully zoomed-in all the time. JavaScript
 functions are defined:
@@ -296,6 +274,6 @@ process, grand totals, or success / failure data.
 ## Resources
 
 - MDN
-  + [Functions — reusable blocks of code](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-  + [Function return values](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-  + [Function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+  - [Functions — reusable blocks of code](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
+  - [Function return values](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
+  - [Function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
