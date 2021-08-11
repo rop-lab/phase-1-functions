@@ -193,7 +193,7 @@ variables; if you don't assign a value they're `undefined`. **This will
 not cause an error in JavaScript**. This can lead to humorous bugs like:
 
 ```text
-"Wake undefined the undefined"  // From: console.log("Wake ${dogName} the ${dogBreed}");
+"Wake undefined the undefined"  // From: console.log(`Wake ${dogName} the ${dogBreed}`);
 ```
 
 We can assign default arguments to our parameters. While it's not as
