@@ -30,14 +30,13 @@ of abstractions.
 | ----------------------------------------------------------------- | --------------------------------------- |
 | John, Paul, George, Ringo                                         | The Beatles                             |
 | Get two pieces of bread, put jam on ...                           | Make a peanut butter and jelly sandwich |
-| Hermione, Harry, Ron                                              | Troublesome Gryffindors                 |
 | visit site, make userid, make password...                         | Sign up for Flatbook                    |
 | get in the lift, hit "G" button, exit elevator, walk to subway... | Go home                                 |
 
 We create abstractions to make it easier to shorten our sentences. We'd never
 get anything done if we couldn't abstract! We also use abstractions to decide
 what doesn't fit or what should fit. "Mozart" doesn't belong with The Beatles,
-but he does fit with "Classical Masters."
+but he does fit with "Classical Composers."
 
 Abstractions help us think about complex activities. Humans brought the pattern of
 "abstracting work" to JavaScript. Abstractions that hold work are called
@@ -91,10 +90,10 @@ Here we have _abstracted_ 6 activities into 1 activity:
 ## Explain How To _Call_ a Function
 
 To "execute" or "call" a function in JavaScript you add `()` after its name. To
-execute the function we just defined, you run: `exerciseByronThePoodle()`. When we ran
-`document.querySelector()`, we were _calling_ a function. `Math.floor()` is
-another function. That `()` is also known as the _invocation operator_ because
-it tells JavaScript to...invoke the function.
+execute the function we just defined, you run: `exerciseByronThePoodle()`. When
+we ran `document.querySelector()`, we were _calling_ a function. `Math.floor()`
+is another function. That `()` is also known as the _invocation operator_
+because it tells JavaScript to...invoke the function.
 
 > **LEARNING TIP**: Try defining a small function in the JavaScript console to
 > test this out. You can copy the syntax provided above.
@@ -176,8 +175,9 @@ function exerciseDog(dogName, dogBreed) {
 }
 ```
 
-When the function is _called_, it assigns `dogName = "Byron"` and `dogBreed = "poodle"`. The parameters are usable inside the function body _as if_ they had
-been set with `const` inside the function.
+When the function is _called_, it assigns `dogName = "Byron"` and
+`dogBreed = "poodle"`. The parameters are usable inside the function body _as
+if_ they had been set with `const` inside the function.
 
 Because our function is now more _general_, we can:
 
