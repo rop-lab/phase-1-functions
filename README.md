@@ -98,9 +98,14 @@ because it tells JavaScript to...invoke the function.
 > **LEARNING TIP**: Try defining a small function in the JavaScript console to
 > test this out. You can copy the syntax provided above.
 
-A _function_ must be _declared_ before it can be called. Calling
-`exerciseByronThePoodle()` before the function has been declared causes an
-error for JavaScript.
+Of course, calling a function only works if the function has been _declared_.
+
+**Note**: Later in the course you will learn about different ways of declaring
+functions and about a concept called _hoisting_. If you declare a function using
+the `function` keyword, as we have been doing so far, the function call can
+actually come **before** the function declaration in the code file, due to
+hoisting. But it needs to exist somewhere; if you try to call a function that
+hasn't been declared somewhere in the code, you'll get an error.
 
 ## Define "Generalization"
 
